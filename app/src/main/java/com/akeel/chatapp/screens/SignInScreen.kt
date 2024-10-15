@@ -65,7 +65,7 @@ fun SignInScreen() {
 
         Spacer(modifier = Modifier.height(70.dp))
         Button(
-            onClick = { /*TODO*/ },
+            onClick = {  },
             modifier = Modifier
                 .background(brush, CircleShape)
                 .fillMaxWidth(.7f)
