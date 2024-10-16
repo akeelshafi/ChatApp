@@ -31,7 +31,10 @@ import com.akeel.chatapp.R
 
 @Preview(showBackground = true)
 @Composable
-fun SignInScreen() {
+fun SignInScreen(
+    onSignInClick: () -> Unit
+)
+{
     val brush = Brush.linearGradient(
         listOf(
             Color(0xFF238CCD),
@@ -65,7 +68,7 @@ fun SignInScreen() {
 
         Spacer(modifier = Modifier.height(70.dp))
         Button(
-            onClick = {  },
+            onClick = { onSignInClick() },
             modifier = Modifier
                 .background(brush, CircleShape)
                 .fillMaxWidth(.7f)
