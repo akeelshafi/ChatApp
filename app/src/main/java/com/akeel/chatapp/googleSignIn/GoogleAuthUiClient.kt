@@ -68,7 +68,7 @@ class GoogleAuthUiClient(
                     )
                 }
             )
-        }catch (e:Exception){
+        } catch (e: Exception) {
             e.printStackTrace()
             if (e is CancellationException) throw e
             SignInResult(
@@ -77,8 +77,19 @@ class GoogleAuthUiClient(
             )
         }
 
-        }
     }
+
+    fun getSignedInUser(): UserData? = auth.currentUser?.run {
+        UserData(
+            email = email.toString(),
+            userId = uid,
+            username = displayName,
+            ppUrl = photoUrl.toString()
+
+        )
+
+    }
+}
 
 
 

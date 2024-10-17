@@ -28,10 +28,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.akeel.chatapp.R
 
-
-@Preview(showBackground = true)
 @Composable
-fun SignInScreen(
+fun SignInScreenUI(
     onSignInClick: () -> Unit
 )
 {
